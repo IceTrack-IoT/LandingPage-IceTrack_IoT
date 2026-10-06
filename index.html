@@ -1,0 +1,766 @@
+<!doctype html>http://127.0.0.1:3000/index.html?vscode-livepreview=true
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">IceTrack — Industrial IoT Cold Chain Monitoring &amp; Predictive Maintenance</title>
+  <meta name="description" content="IceTrack is an IoT data intelligence platform for commercial cold chains: real-time temperature telemetry, automated thermal alerts and predictive refrigeration maintenance." data-i18n-attr="content:meta.description">
+  <meta name="theme-color" content="#004AAD">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="IceTrack">
+  <meta property="og:title" content="IceTrack — Industrial Data Intelligence for Refrigeration Assets" data-i18n-attr="content:meta.ogTitle">
+  <meta property="og:description" content="IceTrack is an IoT data intelligence platform for commercial cold chains: real-time temperature telemetry, automated thermal alerts and predictive refrigeration maintenance." data-i18n-attr="content:meta.description">
+  <link rel="icon" type="image/svg+xml" href="public/assets/icons/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- Loaded synchronously: sets <html lang> before first paint to avoid a flash of the wrong language. -->
+  <script src="scripts/i18n.js"></script>
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+
+  <!-- ===================================================== HEADER -->
+  <header class="site-header" data-header>
+    <div class="container site-header__bar">
+      <a class="brand" href="#top" aria-label="IceTrack — back to top" data-i18n-attr="aria-label:a11y.home">
+        <img class="brand__mark" src="public/assets/icons/logo.svg" alt="" width="31" height="37">
+        <span class="brand__word" aria-hidden="true">Ice<span class="brand__word-accent">Track</span></span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary" data-i18n-attr="aria-label:a11y.primaryNav" data-nav>
+        <ul class="site-nav__list" role="list">
+          <li><a class="site-nav__link" href="#solutions" data-nav-link><span class="site-nav__num num" aria-hidden="true">01</span><span data-i18n="nav.solutions">Solutions</span></a></li>
+          <li><a class="site-nav__link" href="#features" data-nav-link><span class="site-nav__num num" aria-hidden="true">02</span><span data-i18n="nav.features">Features</span></a></li>
+          <li><a class="site-nav__link" href="#about" data-nav-link><span class="site-nav__num num" aria-hidden="true">03</span><span data-i18n="nav.about">Mission &amp; Vision</span></a></li>
+          <li><a class="site-nav__link" href="#hardware" data-nav-link><span class="site-nav__num num" aria-hidden="true">04</span><span data-i18n="nav.hardware">IoT Hardware</span></a></li>
+        </ul>
+        <div class="site-nav__ctas">
+          <a class="btn btn--secondary" href="#get-started">
+            <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-device-mobile"></use></svg>
+            <span class="label-full" data-i18n="cta.fieldApp">Download Field App</span>
+            <span class="label-short" data-i18n="cta.fieldAppShort">Field App</span>
+          </a>
+          <a class="btn btn--primary" href="#get-started">
+            <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-device-desktop"></use></svg>
+            <span class="label-full" data-i18n="cta.console">Web Console Sign In</span>
+            <span class="label-short" data-i18n="cta.consoleShort">Sign In</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="site-header__tools">
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:a11y.language">
+          <button type="button" class="lang-switch__btn" data-lang-switch="en" aria-pressed="true" lang="en">EN<span class="visually-hidden"> — English</span></button>
+          <button type="button" class="lang-switch__btn" data-lang-switch="es" aria-pressed="false" lang="es">ES<span class="visually-hidden"> — Español</span></button>
+        </div>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu" data-i18n-attr="aria-label:a11y.menu" data-nav-toggle>
+          <svg class="icon nav-toggle__open" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-menu-2"></use></svg>
+          <svg class="icon nav-toggle__close" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-x"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================================================== HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="ticker marquee" role="region" aria-label="Live fleet telemetry ticker" data-i18n-attr="aria-label:a11y.tickerRegion" data-marquee data-ticker hidden>
+        <div class="marquee__viewport">
+          <div class="marquee__track ticker__track" data-ticker-track></div>
+        </div>
+        <button type="button" class="marquee__toggle" aria-pressed="false" aria-label="Pause live ticker" data-i18n-attr="aria-label:a11y.pauseTicker" data-marquee-toggle>
+          <svg class="icon marquee__icon-pause" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-player-pause"></use></svg>
+          <svg class="icon marquee__icon-play" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-player-play"></use></svg>
+        </button>
+      </div>
+
+      <div class="hero__ghost num" aria-hidden="true" data-ghost-temp>-18.4°</div>
+
+      <div class="container hero__inner">
+        <div class="hero__head">
+          <div class="hero__intro">
+            <p class="beacon">
+              <span class="beacon__dot" aria-hidden="true"></span>
+              <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-activity"></use></svg>
+              <span data-i18n="hero.beacon">Real-Time IoT Telemetry · Cold Chain Surveillance</span>
+            </p>
+            <h1 class="display-1 hero__title" id="hero-title" data-i18n-html="hero.title">Industrial Data Intelligence to Safeguard Your <span class="hero__title-accent">Refrigeration Assets</span></h1>
+          </div>
+          <div class="hero__clock">
+            <span class="label hero__clock-label" data-i18n="hero.clockLabel">Industrial Depot · Local Time</span>
+            <span class="hero__clock-time num" data-clock>--:--:--</span>
+            <span class="hero__uplink">
+              <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-cpu"></use></svg>
+              <span data-i18n="hero.uplink">Edge Gateway GW-01 · Uplink Stable</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="hero__body">
+          <div class="hero__copy">
+            <p class="hero__lead" data-i18n="hero.lead">Prevent costly perishable spoilage, cut electrical waste, and shift from reactive emergency repairs to predictive maintenance — with continuous IoT temperature sensing and automated anomaly alerts.</p>
+            <div class="hero__ctas">
+              <a class="btn btn--primary btn--lg btn--glow" href="#get-started">
+                <span data-i18n="cta.demo">Request Commercial Demo</span>
+                <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-arrow-right"></use></svg>
+              </a>
+              <a class="btn btn--ghost-dark btn--lg" href="#get-started">
+                <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-tools"></use></svg>
+                <span data-i18n="cta.portal">Contractor &amp; Technician Portal</span>
+              </a>
+            </div>
+            <p class="hero__hint">
+              <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-chevron-right"></use></svg>
+              <span data-i18n="hero.hint">Trigger an event on the live console to watch IceTrack detect, classify and escalate it in real time — the same asset updates in the fleet console further down the page.</span>
+            </p>
+          </div>
+
+          <!-- Interactive live telemetry card -->
+          <article class="telemetry" aria-labelledby="telemetry-title" data-telemetry data-tone="success">
+            <div class="telemetry__sim" role="group" aria-labelledby="sim-label">
+              <span class="telemetry__sim-label label" id="sim-label" data-i18n="sim.label">Simulate Event</span>
+              <button type="button" class="sim-btn" data-scenario="normal" aria-pressed="true"><span class="dot dot--success" aria-hidden="true"></span><span data-i18n="sim.normal">Normal Operation</span></button>
+              <button type="button" class="sim-btn" data-scenario="drift" aria-pressed="false"><span class="dot dot--warning" aria-hidden="true"></span><span data-i18n="sim.drift">Thermal Drift</span></button>
+              <button type="button" class="sim-btn" data-scenario="breach" aria-pressed="false"><span class="dot dot--danger" aria-hidden="true"></span><span data-i18n="sim.breach">Power Interruption</span></button>
+              <button type="button" class="sim-btn" data-scenario="offline" aria-pressed="false"><span class="dot dot--offline" aria-hidden="true"></span><span data-i18n="sim.offline">Probe Disconnect</span></button>
+            </div>
+
+            <div class="telemetry__body">
+              <div class="telemetry__head">
+                <div class="telemetry__asset">
+                  <span class="icon-tile" aria-hidden="true"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-snowflake"></use></svg></span>
+                  <div class="telemetry__asset-text">
+                    <p class="telemetry__title" id="telemetry-title" data-i18n="tel.asset">Walk-In Cold Room #02 — Industrial Depot</p>
+                    <p class="telemetry__id label"><span data-i18n="tel.assetId">Asset ID:</span> <span class="num">ICE-TRK-COLD-02</span></p>
+                  </div>
+                </div>
+                <span class="status-badge">
+                  <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-wifi" data-tel-badge-icon></use></svg>
+                  <span data-tel-badge>Online (MQTT / BLE)</span>
+                </span>
+              </div>
+
+              <div class="telemetry__readout">
+                <div>
+                  <p class="telemetry__kpi-label label">
+                    <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-temperature"></use></svg>
+                    <span data-tel-kpi>Live Cabinet Temperature</span>
+                  </p>
+                  <p class="telemetry__temp num" data-tel-temp>-18.4&nbsp;°C</p>
+                </div>
+                <p class="range-chip"><span data-i18n="tel.range">Optimal Range:</span> <span class="range-chip__value num" data-i18n="tel.rangeValue">[-20.0 °C to -16.0 °C]</span></p>
+              </div>
+
+              <div class="telemetry__alert-region" role="status" aria-live="polite" data-tel-alert></div>
+
+              <figure class="sparkline">
+                <figcaption class="sparkline__head label">
+                  <span data-i18n="tel.trend">12-Hour Temperature Trend</span>
+                  <span class="sparkline__live"><span class="live-dot" aria-hidden="true"></span><span data-tel-live>Live</span></span>
+                </figcaption>
+                <svg class="sparkline__chart" viewBox="0 0 488 132" role="img" aria-label="12-hour temperature trend against the optimal range" data-i18n-attr="aria-label:tel.chartLabel">
+                  <rect class="sparkline__band" x="0" y="29.3" width="480" height="69.3" data-spark-band></rect>
+                  <line class="sparkline__limit" x1="0" y1="29.3" x2="480" y2="29.3" data-spark-upper></line>
+                  <line class="sparkline__limit" x1="0" y1="98.7" x2="480" y2="98.7" data-spark-lower></line>
+                  <text class="sparkline__limit-label" x="4" y="25.3" data-spark-upper-label>-16.0 °C</text>
+                  <text class="sparkline__limit-label" x="4" y="110.7" data-spark-lower-label>-20.0 °C</text>
+                  <polygon class="sparkline__area" points="0,69.2 20,70.9 40,68.3 60,70.1 80,72.7 100,70.9 120,69.2 140,67.5 160,70.1 180,71.8 200,62.3 220,51.9 240,50.1 260,57.1 280,65.7 300,70.9 320,72.7 340,70.1 360,68.3 380,70.9 400,73.5 420,71.8 440,70.1 460,69.2 480,70.9 480,132 0,132" data-spark-area></polygon>
+                  <polyline class="sparkline__line" points="0,69.2 20,70.9 40,68.3 60,70.1 80,72.7 100,70.9 120,69.2 140,67.5 160,70.1 180,71.8 200,62.3 220,51.9 240,50.1 260,57.1 280,65.7 300,70.9 320,72.7 340,70.1 360,68.3 380,70.9 400,73.5 420,71.8 440,70.1 460,69.2 480,70.9" data-spark-line></polyline>
+                  <circle class="sparkline__dot" cx="480" cy="70.9" r="4.5" data-spark-dot></circle>
+                </svg>
+                <div class="sparkline__axis num" aria-hidden="true"><span data-i18n="tel.axis12">12h ago</span><span data-i18n="tel.axis6">6h ago</span><span data-i18n="tel.axisNow">Now</span></div>
+              </figure>
+
+              <ul class="telemetry__metrics" role="list">
+                <li class="metric">
+                  <svg class="icon metric__icon metric__icon--brand" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-bolt"></use></svg>
+                  <span><span class="metric__value num" data-tel-load>3.2 kW · 78%</span> <span data-tel-load-text>Load</span></span>
+                </li>
+                <li class="metric">
+                  <svg class="icon metric__icon metric__icon--tone" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-check" data-tel-alerts-icon></use></svg>
+                  <span><span class="metric__value num" data-tel-alerts>0</span> <span data-tel-alerts-text>Active Thermal Alerts</span></span>
+                </li>
+                <li class="metric">
+                  <svg class="icon metric__icon metric__icon--accent" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-clock"></use></svg>
+                  <span data-tel-sync>Synced <span class="metric__value num">12s</span> ago</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== 01 SOLUTIONS -->
+    <section class="section solutions" id="solutions" aria-labelledby="solutions-title">
+      <div class="container">
+        <div class="section-head section-head--split reveal">
+          <div class="section-head__text">
+            <p class="eyebrow"><span class="eyebrow__num num">01</span><span class="eyebrow__rule" aria-hidden="true"></span><span data-i18n="solutions.eyebrow">Segmented Solutions</span></p>
+            <h2 class="h2" id="solutions-title" data-i18n="solutions.title">Specialized Solutions Across the Cold Chain Lifecycle</h2>
+            <p class="section-lead" data-i18n="solutions.lead">Tailored intelligence whether you manage multi-branch inventories or deliver certified field maintenance.</p>
+          </div>
+          <div class="role-switch" role="tablist" aria-label="Choose your role" data-i18n-attr="aria-label:solutions.roleLabel" data-tabs>
+            <button type="button" class="role-switch__tab" role="tab" id="tab-owner" aria-controls="panel-owner" aria-selected="true">
+              <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-building-store"></use></svg>
+              <span class="role-switch__text">
+                <span class="role-switch__title" data-i18n="solutions.tabOwner">I Operate Facilities</span>
+                <span class="role-switch__sub" data-i18n="solutions.tabOwnerSub">Owners &amp; Directors</span>
+              </span>
+            </button>
+            <button type="button" class="role-switch__tab" role="tab" id="tab-tech" aria-controls="panel-tech" aria-selected="false" tabindex="-1">
+              <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-tools"></use></svg>
+              <span class="role-switch__text">
+                <span class="role-switch__title" data-i18n="solutions.tabTech">I Service Equipment</span>
+                <span class="role-switch__sub" data-i18n="solutions.tabTechSub">HVAC/R Technicians</span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card A · Business owners -->
+        <div class="bento reveal" id="panel-owner" role="tabpanel" aria-labelledby="tab-owner" tabindex="0">
+          <div class="bento__metric">
+            <svg class="icon bento__watermark" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-building-store"></use></svg>
+            <span class="label bento__metric-label" data-i18n="solutions.outcome">Measured Outcome</span>
+            <p class="bento__stat">
+              <span class="bento__stat-value num">95%</span>
+              <span class="bento__stat-text" data-i18n="owner.metric">Reduction in Spoilage Losses</span>
+            </p>
+            <a class="btn btn--white" href="#hardware">
+              <span data-i18n="owner.cta">Explore Enterprise Platform</span>
+              <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-chevron-right"></use></svg>
+            </a>
+          </div>
+          <div class="bento__info">
+            <div class="bento__tags">
+              <span class="icon-tile icon-tile--lg" aria-hidden="true"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-building-store"></use></svg></span>
+              <span class="chip" data-i18n="owner.tag">Commercial Asset Protection</span>
+            </div>
+            <div>
+              <h3 class="h3" data-i18n="owner.title">Business Owners &amp; Operations Directors</h3>
+              <p class="bento__audience" data-i18n="owner.audience">Supermarkets, Restaurants &amp; Cold Storage</p>
+            </div>
+            <p class="bento__desc" data-i18n="owner.desc">Protect perishable stock, keep health compliance records audit-ready, catch door seal leaks early, and supervise refrigeration performance across every branch from one centralized web console.</p>
+            <ul class="checklist" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-check"></use></svg><span data-i18n="owner.f1">Inventory preservation</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-check"></use></svg><span data-i18n="owner.f2">Health compliance logs</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-check"></use></svg><span data-i18n="owner.f3">Multi-branch overview</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-check"></use></svg><span data-i18n="owner.f4">Door leak detection</span></li>
+            </ul>
+          </div>
+          <div class="bento__demo">
+            <div class="bento__demo-head label"><span data-i18n="owner.demoTitle">Branch Overview</span><span data-i18n-html="owner.demoCount"><span class="num">3</span> Locations</span></div>
+            <div class="branch" data-tone="success">
+              <div class="branch__row"><span class="branch__name"><span class="dot" aria-hidden="true"></span><span data-i18n="owner.b1">Downtown Market — Freezer A</span></span><span class="num">-19.1 °C</span></div>
+              <div class="meter" aria-hidden="true"><span class="meter__fill" style="--value: 78%"></span></div>
+            </div>
+            <div class="branch" data-tone="success">
+              <div class="branch__row"><span class="branch__name"><span class="dot" aria-hidden="true"></span><span data-i18n="owner.b2">Harbor Bistro — Walk-In Cooler</span></span><span class="num">3.4 °C</span></div>
+              <div class="meter" aria-hidden="true"><span class="meter__fill" style="--value: 64%"></span></div>
+            </div>
+            <div class="branch branch--alert" data-tone="warning">
+              <div class="branch__row"><span class="branch__name"><span class="dot" aria-hidden="true"></span><span data-i18n="owner.b3">North Plaza — Dairy Case</span></span><span class="num branch__value">6.8 °C</span></div>
+              <p class="branch__note label" data-i18n="owner.b3Alert">Door Seal Drift Detected</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card B · HVAC/R technicians -->
+        <div class="bento reveal" id="panel-tech" role="tabpanel" aria-labelledby="tab-tech" tabindex="0" hidden>
+          <div class="bento__metric bento__metric--dark">
+            <svg class="icon bento__watermark" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-tools"></use></svg>
+            <span class="label bento__metric-label" data-i18n="solutions.outcome">Measured Outcome</span>
+            <p class="bento__stat">
+              <span class="bento__stat-value num">40%</span>
+              <span class="bento__stat-text" data-i18n="tech.metric">Faster On-Site Diagnosis Time</span>
+            </p>
+            <a class="btn btn--white" href="#hardware">
+              <span data-i18n="tech.cta">Explore Technician Mobile App</span>
+              <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-chevron-right"></use></svg>
+            </a>
+          </div>
+          <div class="bento__info">
+            <div class="bento__tags">
+              <span class="icon-tile icon-tile--lg" aria-hidden="true"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-tools"></use></svg></span>
+              <span class="chip" data-i18n="tech.tag">Field Service &amp; HVAC/R Operations</span>
+            </div>
+            <div>
+              <h3 class="h3" data-i18n="tech.title">Certified HVAC/R Technicians &amp; Service Contractors</h3>
+              <p class="bento__audience" data-i18n="tech.audience">Field Diagnostics, Dispatch &amp; Preventive Service</p>
+            </div>
+            <p class="bento__desc" data-i18n="tech.desc">Review continuous equipment telemetry history, diagnose compressor performance before the site visit, receive instant fault alerts on your phone, and track every maintenance dispatch.</p>
+            <ul class="checklist" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-check"></use></svg><span data-i18n="tech.f1">Centralized equipment service history</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-check"></use></svg><span data-i18n="tech.f2">Pre-visit diagnostics</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-check"></use></svg><span data-i18n="tech.f3">Automated fault notifications</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-check"></use></svg><span data-i18n="tech.f4">Field dispatch tracking</span></li>
+            </ul>
+          </div>
+          <div class="bento__demo">
+            <div class="bento__demo-head label"><span data-i18n="tech.demoTitle">Compressor Diagnostics — RX-114</span><span class="bento__demo-flag" data-i18n="tech.demoTag">Pre-Visit Check</span></div>
+            <div class="diag-grid">
+              <div class="diag"><span class="diag__label label" data-i18n="tech.discharge">Discharge</span><span class="diag__value num">18.6 bar</span></div>
+              <div class="diag"><span class="diag__label label" data-i18n="tech.suction">Suction</span><span class="diag__value num">-9.8 °C</span></div>
+              <div class="diag"><span class="diag__label label" data-i18n="tech.runCycle">Run Cycle</span><span class="diag__value num">42 min</span></div>
+            </div>
+            <div class="branch branch--alert" data-tone="warning">
+              <div class="branch__row">
+                <span class="branch__name branch__name--tone"><svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-alert-triangle"></use></svg><span data-i18n="tech.shortCycling">Short-Cycling Detected</span></span>
+                <span class="num">72 / 100</span>
+              </div>
+              <div class="meter meter--thick" aria-hidden="true"><span class="meter__fill" style="--value: 72%"></span></div>
+            </div>
+            <p class="diag-foot">
+              <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-history"></use></svg>
+              <span data-i18n-html="tech.lastService">Last service: <span class="num">Jul 14, 2026</span></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== 02 FEATURES -->
+    <section class="section features" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow__num num">02</span><span class="eyebrow__rule" aria-hidden="true"></span><span data-i18n="features.eyebrow">Core Capabilities</span></p>
+          <h2 class="h2" id="features-title" data-i18n="features.title">From Probe to Person: Every Reading Follows the Signal Path</h2>
+        </div>
+
+        <ol class="signal reveal" role="list" aria-label="Signal path" data-i18n-attr="aria-label:signal.label">
+          <li class="signal__node"><span class="signal__dot" aria-hidden="true"></span><span class="signal__label" data-i18n="signal.probe">Sensor Probe</span></li>
+          <li class="signal__node"><span class="signal__dot" aria-hidden="true"></span><span class="signal__label" data-i18n="signal.gateway">Edge Gateway</span></li>
+          <li class="signal__node"><span class="signal__dot" aria-hidden="true"></span><span class="signal__label" data-i18n="signal.cloud">IceTrack Cloud</span></li>
+          <li class="signal__node"><span class="signal__dot" aria-hidden="true"></span><span class="signal__label" data-i18n="signal.team">Your Team</span></li>
+          <li class="signal__rail" aria-hidden="true"><span class="signal__pulse"></span></li>
+        </ol>
+
+        <div class="features__grid reveal">
+          <article class="feature-card">
+            <span class="feature-card__connector" aria-hidden="true"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-chevron-right"></use></svg></span>
+            <div class="feature-card__top">
+              <span class="icon-tile icon-tile--lg" aria-hidden="true"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-cpu"></use></svg></span>
+              <span class="feature-card__index num" aria-hidden="true">01</span>
+            </div>
+            <h3 class="h3" data-i18n="f1.title">Continuous IoT Telemetry</h3>
+            <p class="feature-card__desc" data-i18n-html="f1.desc">Direct sensor integration (<span class="chip-inline">PT100</span>, <span class="chip-inline">NTC</span>, <span class="chip-inline">OEM Controllers</span>) sampled every 30 seconds, with zero data loss through local offline caching.</p>
+            <div class="viz" aria-hidden="true">
+              <div class="viz-poll">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="viz__foot"><span data-i18n="f1.vizLabel">Polling Interval</span><span class="num viz__strong">30 s</span></div>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-card__connector" aria-hidden="true"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-chevron-right"></use></svg></span>
+            <div class="feature-card__top">
+              <span class="icon-tile icon-tile--lg" aria-hidden="true"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-bell"></use></svg></span>
+              <span class="feature-card__index num" aria-hidden="true">02</span>
+            </div>
+            <h3 class="h3" data-i18n="f2.title">Automated Anomaly Alerts</h3>
+            <p class="feature-card__desc" data-i18n-html="f2.desc">Instant multi-tier notifications (<span class="chip-inline">Push</span>, <span class="chip-inline">SMS</span>, <span class="chip-inline">Webhooks</span>) on threshold drift, door-ajar events or power loss.</p>
+            <div class="viz viz-tiers" aria-hidden="true">
+              <div class="tier" data-tone="warning"><span class="tier__name"><span class="tier__icon"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-device-mobile"></use></svg></span><span data-i18n="f2.tier1">Tier 1 · Push</span></span><span class="num">0 s</span></div>
+              <div class="tier tier--2" data-tone="danger"><span class="tier__name"><span class="tier__icon"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-message"></use></svg></span><span data-i18n="f2.tier2">Tier 2 · SMS</span></span><span class="num">+2 min</span></div>
+              <div class="tier tier--3" data-tone="brand"><span class="tier__name"><span class="tier__icon"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-webhook"></use></svg></span><span data-i18n="f2.tier3">Tier 3 · Webhook</span></span><span class="num">+5 min</span></div>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-card__connector" aria-hidden="true"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-chevron-right"></use></svg></span>
+            <div class="feature-card__top">
+              <span class="icon-tile icon-tile--lg" aria-hidden="true"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-history"></use></svg></span>
+              <span class="feature-card__index num" aria-hidden="true">03</span>
+            </div>
+            <h3 class="h3" data-i18n="f3.title">Digital Equipment Passports</h3>
+            <p class="feature-card__desc" data-i18n="f3.desc">A complete technical history for every asset: compressor operating hours, past repairs and component replacements, and scheduled preventive checkups.</p>
+            <div class="viz viz-timeline" aria-hidden="true">
+              <div class="timeline__item"><span class="timeline__dot"></span><span class="timeline__text" data-i18n="f3.e1">Condenser fan replaced</span><span class="num timeline__date" data-i18n="f3.d1">Mar 2026</span></div>
+              <div class="timeline__item"><span class="timeline__dot"></span><span class="timeline__text" data-i18n="f3.e2">Refrigerant charge verified</span><span class="num timeline__date" data-i18n="f3.d2">Jul 2026</span></div>
+              <div class="timeline__item timeline__item--next"><span class="timeline__dot"></span><span class="timeline__text" data-i18n="f3.e3">Preventive checkup</span><span class="num timeline__date" data-i18n="f3.d3">Nov 2026</span></div>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__top">
+              <span class="icon-tile icon-tile--lg" aria-hidden="true"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-bolt"></use></svg></span>
+              <span class="feature-card__index num" aria-hidden="true">04</span>
+            </div>
+            <h3 class="h3" data-i18n="f4.title">Energy Efficiency Analytics</h3>
+            <p class="feature-card__desc" data-i18n="f4.desc">Pinpoint compressor overwork, inefficient defrost cycles and abnormal power draw before they inflate your utility bill.</p>
+            <div class="viz" aria-hidden="true">
+              <div class="viz-bars">
+                <span style="--h: 52%"></span><span style="--h: 58%"></span><span style="--h: 55%"></span><span class="is-peak" style="--h: 96%"></span><span style="--h: 60%"></span><span style="--h: 54%"></span><span class="is-today" style="--h: 50%"></span>
+              </div>
+              <div class="viz__foot"><span data-i18n="f4.vizLabel">7-Day Draw</span><span class="viz__alert" data-i18n="f4.vizAlert">Irregular Draw · Thu</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== 03 MISSION & VISION -->
+    <section class="section mission" id="about" aria-labelledby="about-title">
+      <div class="container mission__inner">
+        <p class="eyebrow reveal"><span class="eyebrow__num num">03</span><span class="eyebrow__rule" aria-hidden="true"></span><span data-i18n="about.eyebrow">Institutional Trust</span></p>
+        <h2 class="visually-hidden" id="about-title" data-i18n="about.title">Mission &amp; Strategic Vision</h2>
+
+        <div class="mission__statement reveal">
+          <div class="mission__rail">
+            <span class="icon-tile icon-tile--xl icon-tile--dark" aria-hidden="true"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-shield-check"></use></svg></span>
+            <h3 class="mission__rail-title" data-i18n="about.missionTitle">Our Mission</h3>
+            <span class="mission__rail-line" aria-hidden="true"></span>
+          </div>
+          <p class="mission__text" data-i18n-html="about.mission">To provide an intelligent data platform that empowers businesses to <strong>protect perishable inventory</strong> and optimize refrigeration asset operations, while equipping technicians and service providers with advanced telemetry to <strong>maximize field efficiency</strong> and response capacity.</p>
+        </div>
+
+        <div class="vision reveal">
+          <div class="vision__card">
+            <span class="icon-tile icon-tile--xl icon-tile--brand" aria-hidden="true"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-activity"></use></svg></span>
+            <div class="vision__text">
+              <h3 class="vision__title" data-i18n="about.visionTitle">Our Strategic Vision</h3>
+              <p data-i18n="about.vision">To become the leading platform for smart refrigeration monitoring and predictive maintenance in Peru and Latin America — the benchmark for cold chain reliability across commercial and industrial operations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical validation tags -->
+      <div class="tag-band marquee" data-marquee>
+        <div class="marquee__viewport">
+          <div class="marquee__track tag-band__track">
+            <ul class="tag-band__group" role="list" aria-label="Technical validation" data-i18n-attr="aria-label:tags.label">
+              <li class="tag-band__item"><svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-cpu"></use></svg><span data-i18n="tags.gateway">Industrial Edge Gateway Resilience</span><svg class="icon tag-band__sep" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-snowflake"></use></svg></li>
+              <li class="tag-band__item"><svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-wifi"></use></svg><span data-i18n="tags.mesh">Multi-Node Mesh Network</span><svg class="icon tag-band__sep" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-snowflake"></use></svg></li>
+              <li class="tag-band__item"><svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-qrcode"></use></svg><span data-i18n="tags.qr">Instant Sensor QR Provisioning</span><svg class="icon tag-band__sep" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-snowflake"></use></svg></li>
+            </ul>
+            <ul class="tag-band__group" role="list" aria-hidden="true">
+              <li class="tag-band__item"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-cpu"></use></svg><span data-i18n="tags.gateway">Industrial Edge Gateway Resilience</span><svg class="icon tag-band__sep"><use href="public/assets/icons/sprite.svg#icon-snowflake"></use></svg></li>
+              <li class="tag-band__item"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-wifi"></use></svg><span data-i18n="tags.mesh">Multi-Node Mesh Network</span><svg class="icon tag-band__sep"><use href="public/assets/icons/sprite.svg#icon-snowflake"></use></svg></li>
+              <li class="tag-band__item"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-qrcode"></use></svg><span data-i18n="tags.qr">Instant Sensor QR Provisioning</span><svg class="icon tag-band__sep"><use href="public/assets/icons/sprite.svg#icon-snowflake"></use></svg></li>
+            </ul>
+            <ul class="tag-band__group" role="list" aria-hidden="true">
+              <li class="tag-band__item"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-cpu"></use></svg><span data-i18n="tags.gateway">Industrial Edge Gateway Resilience</span><svg class="icon tag-band__sep"><use href="public/assets/icons/sprite.svg#icon-snowflake"></use></svg></li>
+              <li class="tag-band__item"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-wifi"></use></svg><span data-i18n="tags.mesh">Multi-Node Mesh Network</span><svg class="icon tag-band__sep"><use href="public/assets/icons/sprite.svg#icon-snowflake"></use></svg></li>
+              <li class="tag-band__item"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-qrcode"></use></svg><span data-i18n="tags.qr">Instant Sensor QR Provisioning</span><svg class="icon tag-band__sep"><use href="public/assets/icons/sprite.svg#icon-snowflake"></use></svg></li>
+            </ul>
+            <ul class="tag-band__group" role="list" aria-hidden="true">
+              <li class="tag-band__item"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-cpu"></use></svg><span data-i18n="tags.gateway">Industrial Edge Gateway Resilience</span><svg class="icon tag-band__sep"><use href="public/assets/icons/sprite.svg#icon-snowflake"></use></svg></li>
+              <li class="tag-band__item"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-wifi"></use></svg><span data-i18n="tags.mesh">Multi-Node Mesh Network</span><svg class="icon tag-band__sep"><use href="public/assets/icons/sprite.svg#icon-snowflake"></use></svg></li>
+              <li class="tag-band__item"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-qrcode"></use></svg><span data-i18n="tags.qr">Instant Sensor QR Provisioning</span><svg class="icon tag-band__sep"><use href="public/assets/icons/sprite.svg#icon-snowflake"></use></svg></li>
+            </ul>
+          </div>
+        </div>
+        <button type="button" class="marquee__toggle" aria-pressed="false" aria-label="Pause scrolling tags" data-i18n-attr="aria-label:a11y.pauseTags" data-marquee-toggle>
+          <svg class="icon marquee__icon-pause" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-player-pause"></use></svg>
+          <svg class="icon marquee__icon-play" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-player-play"></use></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================================================== 04 IOT HARDWARE & ECOSYSTEM -->
+    <section class="section platform" id="hardware" aria-labelledby="hardware-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow__num num">04</span><span class="eyebrow__rule" aria-hidden="true"></span><span data-i18n="hw.eyebrow">IoT Hardware &amp; Ecosystem</span></p>
+          <h2 class="h2" id="hardware-title" data-i18n="hw.title">One Telemetry Stream, From the Control Room to the Cold Room</h2>
+          <p class="section-lead" data-i18n="hw.lead">Industrial-grade hardware feeds one live data stream. Filter the fleet by status on the web console, or acknowledge a breach from the phone — both screens stay in sync.</p>
+        </div>
+
+        <ul class="hw-strip reveal" role="list">
+          <li class="hw-item">
+            <span class="icon-tile icon-tile--lg" aria-hidden="true"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-temperature"></use></svg></span>
+            <div>
+              <h3 class="hw-item__title" data-i18n="hw.probesTitle">Industrial Sensor Probes</h3>
+              <p class="hw-item__text" data-i18n="hw.probesText">PT100, NTC and OEM controller inputs sampled every 30 seconds.</p>
+            </div>
+          </li>
+          <li class="hw-item">
+            <span class="icon-tile icon-tile--lg" aria-hidden="true"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-cpu"></use></svg></span>
+            <div>
+              <h3 class="hw-item__title" data-i18n="hw.gatewayTitle">Edge Gateways</h3>
+              <p class="hw-item__text" data-i18n="hw.gatewayText">MQTT / BLE uplink with local offline caching when the network drops.</p>
+            </div>
+          </li>
+          <li class="hw-item">
+            <span class="icon-tile icon-tile--lg" aria-hidden="true"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-qrcode"></use></svg></span>
+            <div>
+              <h3 class="hw-item__title" data-i18n="hw.qrTitle">Instant QR Provisioning</h3>
+              <p class="hw-item__text" data-i18n="hw.qrText">Scan a probe's QR code to pair it with an asset — no manual setup.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="fleet-toolbar reveal">
+          <div class="chips" role="group" aria-label="Filter assets by status" data-i18n-attr="aria-label:filter.label">
+            <button type="button" class="filter-chip" data-filter="all" data-tone="brand" aria-pressed="true"><span class="dot" aria-hidden="true"></span><span data-i18n="filter.all">All Assets</span><span class="filter-chip__count num" data-filter-count="all">5</span></button>
+            <button type="button" class="filter-chip" data-filter="normal" data-tone="success" aria-pressed="false"><span class="dot" aria-hidden="true"></span><span data-i18n="status.normal">Normal</span><span class="filter-chip__count num" data-filter-count="normal">2</span></button>
+            <button type="button" class="filter-chip" data-filter="warning" data-tone="warning" aria-pressed="false"><span class="dot" aria-hidden="true"></span><span data-i18n="status.warning">Warning</span><span class="filter-chip__count num" data-filter-count="warning">1</span></button>
+            <button type="button" class="filter-chip" data-filter="critical" data-tone="danger" aria-pressed="false"><span class="dot" aria-hidden="true"></span><span data-i18n="status.critical">Critical</span><span class="filter-chip__count num" data-filter-count="critical">1</span></button>
+            <button type="button" class="filter-chip" data-filter="offline" data-tone="offline" aria-pressed="false"><span class="dot" aria-hidden="true"></span><span data-i18n="status.offline">Offline</span><span class="filter-chip__count num" data-filter-count="offline">1</span></button>
+          </div>
+          <p class="fleet-toolbar__status" role="status" data-filter-status>Showing 5 of 5 assets</p>
+        </div>
+
+        <div class="ecosystem reveal">
+          <!-- Web console mockup -->
+          <figure class="console" aria-label="IceTrack Web Console — fleet overview" data-i18n-attr="aria-label:console.figure">
+            <div class="console__bar">
+              <div class="console__brand">
+                <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-device-desktop-analytics"></use></svg>
+                <span class="console__name" data-i18n="console.title">IceTrack Web Console</span>
+                <span class="console__crumb" data-i18n="console.crumb">/ Fleet Overview</span>
+              </div>
+              <div class="console__live"><span class="live-dot live-dot--success" aria-hidden="true"></span><span data-i18n="console.live">Live</span> · <span class="num console__clock" data-clock>--:--:--</span></div>
+            </div>
+
+            <div class="console__body">
+              <div class="kpis">
+                <div class="kpi"><span class="kpi__label label" data-i18n="console.online">Assets Online</span><span class="kpi__value num"><span data-kpi-online>46</span> / 48</span></div>
+                <div class="kpi"><span class="kpi__label label" data-i18n="console.alerts">Active Alerts</span><span class="kpi__value kpi__value--alert num" data-kpi-alerts>2</span></div>
+                <div class="kpi"><span class="kpi__label label" data-i18n="console.energy">Energy Today</span><span class="kpi__value num">412.6 kWh</span></div>
+                <div class="kpi"><span class="kpi__label label" data-i18n="console.compliance">Compliance Score</span><span class="kpi__value kpi__value--good num">99.4%</span></div>
+              </div>
+
+              <div class="console__row">
+                <div class="panel map-panel">
+                  <div class="panel__head">
+                    <span class="panel__title" data-i18n="console.map">Fleet Map — Industrial Depot</span>
+                    <svg class="icon panel__icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-external-link"></use></svg>
+                  </div>
+                  <div class="fleet-map" role="img" aria-label="Facility map showing monitored assets and their live status" data-i18n-attr="aria-label:console.mapLabel">
+                    <div class="fleet-map__zone" style="--x: 3%; --y: 6%; --w: 45%; --h: 54%"><span class="fleet-map__zone-label label" data-i18n="console.zoneA">Zone A — Frozen</span></div>
+                    <div class="fleet-map__zone" style="--x: 52%; --y: 6%; --w: 45%; --h: 54%"><span class="fleet-map__zone-label label" data-i18n="console.zoneB">Zone B — Chilled</span></div>
+                    <div class="fleet-map__zone" style="--x: 3%; --y: 66%; --w: 94%; --h: 28%"><span class="fleet-map__zone-label label" data-i18n="console.dock">Loading Dock</span></div>
+                    <div class="fleet-map__pins" data-map-pins></div>
+                    <span class="map-pin map-pin--gateway" data-tone="success" style="--x: 60%; --y: 77%">
+                      <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-cpu"></use></svg>
+                      <b>GW-01</b><span class="map-pin__val" data-i18n="console.gateway">Edge Gateway</span>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="panel energy">
+                  <div class="panel__head"><span class="panel__title" data-i18n="console.energyTitle">Energy Breakdown</span><span class="label panel__meta">24h</span></div>
+                  <p class="energy__total num">412.6 <span class="energy__unit">kWh</span></p>
+                  <ul class="energy__list" role="list">
+                    <li><div class="energy__row"><span data-i18n="console.compressors">Compressors</span><span class="num">255.8 kWh</span></div><div class="meter meter--thick" aria-hidden="true"><span class="meter__fill meter__fill--primary" style="--value: 62%"></span></div></li>
+                    <li><div class="energy__row"><span data-i18n="console.defrost">Defrost Cycles</span><span class="num">74.3 kWh</span></div><div class="meter meter--thick" aria-hidden="true"><span class="meter__fill meter__fill--accent" style="--value: 18%"></span></div></li>
+                    <li><div class="energy__row"><span data-i18n="console.fans">Evaporator Fans</span><span class="num">49.5 kWh</span></div><div class="meter meter--thick" aria-hidden="true"><span class="meter__fill meter__fill--ice" style="--value: 12%"></span></div></li>
+                    <li><div class="energy__row"><span data-i18n="console.lighting">Lighting &amp; Controls</span><span class="num">33.0 kWh</span></div><div class="meter meter--thick" aria-hidden="true"><span class="meter__fill meter__fill--muted" style="--value: 8%"></span></div></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="panel">
+                <div class="panel__head panel__head--table">
+                  <span class="panel__title" data-i18n="console.thresholds">Threshold Configuration</span>
+                  <label class="search">
+                    <span class="visually-hidden" data-i18n="console.searchLabel">Search assets</span>
+                    <svg class="icon search__icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-search"></use></svg>
+                    <input class="search__input" type="search" placeholder="Search assets…" autocomplete="off" data-i18n-attr="placeholder:console.search" data-fleet-search>
+                  </label>
+                </div>
+                <div class="table-scroll" role="region" tabindex="0" aria-labelledby="fleet-table-caption">
+                  <table class="fleet-table">
+                    <caption class="visually-hidden" id="fleet-table-caption" data-i18n="console.tableLabel">Asset thresholds and live status</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col" data-i18n="console.colAsset">Asset</th>
+                        <th scope="col" data-i18n="console.colZone">Zone</th>
+                        <th scope="col" class="cell-num" data-i18n="console.colMin">Min</th>
+                        <th scope="col" class="cell-num" data-i18n="console.colMax">Max</th>
+                        <th scope="col" class="cell-num" data-i18n="console.colCurrent">Current</th>
+                        <th scope="col" data-i18n="console.colStatus">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody data-fleet-rows></tbody>
+                  </table>
+                  <p class="fleet-table__empty" data-fleet-empty hidden data-i18n="console.empty">No assets match your search.</p>
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Mobile field app mockup -->
+          <figure class="phone" aria-label="IceTrack Field mobile app" data-i18n-attr="aria-label:phone.figure">
+            <span class="phone__badge"><span class="live-dot live-dot--white" aria-hidden="true"></span><span data-i18n="phone.sync">Live Sync With Console</span></span>
+            <div class="phone__screen">
+              <div class="phone__head">
+                <div>
+                  <p class="phone__eyebrow label" data-i18n="phone.shift">IceTrack Field · On Shift</p>
+                  <p class="phone__title" data-i18n="phone.title">Active Alerts</p>
+                </div>
+                <span class="phone__synced"><svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-wifi"></use></svg><span data-i18n="phone.synced">Synced</span></span>
+              </div>
+
+              <div class="phone__alert" data-phone-alert>
+                <span class="phone__alert-badge"><span class="live-dot live-dot--danger" aria-hidden="true"></span><span data-i18n="phone.critical">Status: Critical Breach</span></span>
+                <p class="phone__alert-asset" data-i18n="phone.alertAsset">Dairy Chiller CH-07 — Industrial Depot</p>
+                <p class="phone__alert-temp num">9.6 °C</p>
+                <p class="phone__alert-meta">
+                  <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-clock"></use></svg>
+                  <span data-i18n-html="phone.alertMeta">Max <span class="num">4.0 °C</span> · Breach for <span class="num">14 min</span></span>
+                </p>
+                <button type="button" class="phone__ack" data-ack>
+                  <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-bell-ringing"></use></svg>
+                  <span data-i18n="phone.ack">Acknowledge Alert</span>
+                </button>
+              </div>
+              <div class="phone__acked" data-phone-acked hidden>
+                <div class="phone__acked-row">
+                  <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-circle-check"></use></svg>
+                  <div>
+                    <p class="phone__acked-title" data-i18n="phone.acked">Alert Acknowledged</p>
+                    <p class="phone__acked-meta" data-i18n="phone.ackedMeta">CH-07 · Dispatch logged · Console updated</p>
+                  </div>
+                </div>
+                <button type="button" class="phone__undo" data-undo data-i18n="phone.undo">Undo</button>
+              </div>
+
+              <button type="button" class="phone__scan" data-scan>
+                <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-qrcode" data-scan-icon></use></svg>
+                <span data-scan-label>Scan Probe QR Code</span>
+              </button>
+              <p class="phone__scan-status" role="status" data-scan-status></p>
+
+              <p class="phone__section label" data-i18n="phone.assigned">Assigned Assets</p>
+              <ul class="phone__list" role="list">
+                <li class="phone__asset">
+                  <div>
+                    <p class="phone__asset-name" data-i18n="phone.cr02">Cold Room CR-02</p>
+                    <p class="phone__asset-meta"><span class="num" data-phone-cr02>-18.4&nbsp;°C</span> · <span data-i18n="phone.cr02Meta">Mirrors Hero Console</span></p>
+                  </div>
+                  <span class="phone__chip" data-tone="success" data-phone-cr02-chip>Normal</span>
+                </li>
+                <li class="phone__asset">
+                  <div>
+                    <p class="phone__asset-name" data-i18n="phone.fr04">Blast Freezer FR-04</p>
+                    <p class="phone__asset-meta" data-i18n-html="phone.fr04Meta"><span class="num">-18.6 °C</span> · Low Battery <span class="num">18%</span></p>
+                  </div>
+                  <span class="phone__chip" data-tone="warning" data-i18n="status.warning">Warning</span>
+                </li>
+                <li class="phone__asset">
+                  <div>
+                    <p class="phone__asset-name" data-i18n="phone.dk01">Loading Dock DK-01</p>
+                    <p class="phone__asset-meta" data-i18n-html="phone.dk01Meta">Last packet <span class="num">6 min</span> ago</p>
+                  </div>
+                  <span class="phone__chip" data-tone="offline"><svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-wifi-off"></use></svg><span data-i18n="status.offline">Offline</span></span>
+                </li>
+              </ul>
+
+              <div class="phone__tabbar" aria-hidden="true">
+                <span class="phone__tab is-active"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-bell"></use></svg><span data-i18n="phone.tabAlerts">Alerts</span></span>
+                <span class="phone__tab"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-temperature"></use></svg><span data-i18n="phone.tabAssets">Assets</span></span>
+                <span class="phone__tab"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-qrcode"></use></svg><span data-i18n="phone.tabScan">Scan</span></span>
+                <span class="phone__tab"><svg class="icon"><use href="public/assets/icons/sprite.svg#icon-history"></use></svg><span data-i18n="phone.tabHistory">History</span></span>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== DUAL-PATH CLOSING BANNER -->
+    <section class="section get-started" id="get-started" aria-labelledby="get-started-title">
+      <div class="container">
+        <h2 class="visually-hidden" id="get-started-title" data-i18n="banner.title">Choose your path</h2>
+        <div class="cta-banner reveal">
+          <svg class="icon cta-banner__watermark" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-snowflake"></use></svg>
+          <div class="cta-banner__grid">
+            <div class="cta-banner__path">
+              <p class="cta-banner__label label"><span class="num">A</span> · <span data-i18n="banner.opsLabel">Operations Path</span></p>
+              <h3 class="cta-banner__title" data-i18n="banner.opsTitle">Managing Commercial Refrigeration?</h3>
+              <p class="cta-banner__text" data-i18n="banner.opsText">Centralize multi-site telemetry, compliance records and alert routing in one web platform.</p>
+              <a class="btn btn--white btn--lg btn--wrap" href="#">
+                <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-device-desktop"></use></svg>
+                <span data-i18n="banner.opsCta">Register Facility (Web Platform)</span>
+              </a>
+            </div>
+            <div class="cta-banner__path cta-banner__path--field">
+              <p class="cta-banner__label label"><span class="num">B</span> · <span data-i18n="banner.fieldLabel">Field Path</span></p>
+              <h3 class="cta-banner__title" data-i18n="banner.fieldTitle">HVAC/R Technician or Contractor?</h3>
+              <p class="cta-banner__text" data-i18n="banner.fieldText">Receive threshold alerts, review equipment histories and provision sensors directly from the field.</p>
+              <a class="btn btn--ghost-dark btn--lg btn--wrap" href="#">
+                <svg class="icon" aria-hidden="true"><use href="public/assets/icons/sprite.svg#icon-download"></use></svg>
+                <span data-i18n="banner.fieldCta">Download Mobile App</span>
+              </a>
+            </div>
+          </div>
+          <span class="cta-banner__or" aria-hidden="true" data-i18n="banner.or">OR</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================== FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <a class="brand" href="#top" aria-label="IceTrack — back to top" data-i18n-attr="aria-label:a11y.home">
+            <img class="brand__mark" src="public/assets/icons/logo.svg" alt="" width="31" height="37" loading="lazy">
+            <span class="brand__word" aria-hidden="true">Ice<span class="brand__word-accent">Track</span></span>
+          </a>
+          <p class="site-footer__desc" data-i18n="footer.desc">IoT data intelligence for commercial cold chains — continuous monitoring, automated thermal alerts and predictive refrigeration maintenance in real time.</p>
+          <p class="uptime">
+            <span class="live-dot live-dot--success" aria-hidden="true"></span>
+            <span data-i18n-html="footer.uptime">All Gateways &amp; Telemetry Services Operational · <span class="num">99.98%</span> System Uptime</span>
+          </p>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Footer" data-i18n-attr="aria-label:a11y.footerNav">
+          <div class="footer-col">
+            <h2 class="footer-col__title label" data-i18n="footer.platform">Platform</h2>
+            <ul role="list">
+              <li><a href="#hardware" data-i18n="footer.webConsole">Web Console</a></li>
+              <li><a href="#hardware" data-i18n="footer.fieldApp">Field Mobile App</a></li>
+              <li><a href="#hardware" data-i18n="footer.provisioning">Sensor Provisioning</a></li>
+              <li><a href="#hardware" data-i18n="footer.gateways">Edge Gateways</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h2 class="footer-col__title label" data-i18n="footer.solutions">Solutions</h2>
+            <ul role="list">
+              <li><a href="#solutions" data-i18n="footer.assetProtection">Commercial Asset Protection</a></li>
+              <li><a href="#solutions" data-i18n="footer.fieldService">Field Service &amp; HVAC/R</a></li>
+              <li><a href="#features" data-i18n="footer.energy">Energy Analytics</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h2 class="footer-col__title label" data-i18n="footer.company">Company</h2>
+            <ul role="list">
+              <li><a href="#about" data-i18n="footer.mission">Mission &amp; Vision</a></li>
+              <li><a href="#features" data-i18n="footer.capabilities">Core Capabilities</a></li>
+              <li><a href="#get-started" data-i18n="footer.contact">Contact Sales</a></li>
+              <li><a href="#" data-i18n="footer.status">System Status</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h2 class="footer-col__title label" data-i18n="footer.legal">Legal</h2>
+            <ul role="list">
+              <li><a href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
+              <li><a href="#" data-i18n="footer.terms">Terms of Service</a></li>
+              <li><a href="#" data-i18n="footer.dpa">Data Processing Agreement</a></li>
+              <li><a href="#" data-i18n="footer.compliance">Compliance Center</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span class="num" data-year>2026</span> IceTrack. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        <ul class="site-footer__legal" role="list">
+          <li><a href="#" data-i18n="footer.cookies">Cookie Preferences</a></li>
+          <li><a href="#" data-i18n="footer.security">Security</a></li>
+          <li><a href="#" data-i18n="footer.accessibility">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="100" height="120" role="img" aria-labelledby="icetrack-logo-title">
+  <title id="icetrack-logo-title">IceTrack</title>
+  <defs>
+    <!-- Hexagonal shield (stroke centreline) -->
+    <path id="it-shield" d="M50 4L96 28V66C96 91 74 107 50 116C26 107 4 91 4 66V28Z"/>
+    <clipPath id="it-inside">
+      <use href="#it-shield"/>
+    </clipPath>
+    <!-- One snowflake arm pointing up from the centre (50,59); colour is inherited from <use> -->
+    <g id="it-arm">
+      <path d="M50 59V0" fill="none" stroke-width="2.4"/>
+      <path d="M50 59V22" fill="none" stroke-width="6.2"/>
+      <path d="M37.4 30.15L50 40L62.6 30.15" fill="none" stroke-width="5.6" stroke-linejoin="miter"/>
+      <circle cx="50" cy="22" r="3.8" stroke="none"/>
+    </g>
+    <!-- Rhombus sitting between two arms -->
+    <path id="it-rhombus" d="M50 33.5L53.6 40.5L50 47.5L46.4 40.5Z" stroke="none"/>
+  </defs>
+
+  <use href="#it-shield" fill="#FFFFFF"/>
+
+  <g clip-path="url(#it-inside)">
+    <g stroke="#0C8DDF" fill="#0C8DDF">
+      <use href="#it-arm"/>
+      <use href="#it-arm" transform="rotate(120 50 59)"/>
+      <use href="#it-arm" transform="rotate(180 50 59)"/>
+      <use href="#it-arm" transform="rotate(240 50 59)"/>
+      <use href="#it-arm" transform="rotate(300 50 59)"/>
+      <use href="#it-rhombus" transform="rotate(30 50 59)"/>
+      <use href="#it-rhombus" transform="rotate(150 50 59)"/>
+      <use href="#it-rhombus" transform="rotate(210 50 59)"/>
+      <use href="#it-rhombus" transform="rotate(270 50 59)"/>
+      <use href="#it-rhombus" transform="rotate(330 50 59)"/>
+    </g>
+    <!-- Alert arm: the one reading IceTrack catches before it becomes a loss -->
+    <g stroke="#EF4444" fill="#EF4444">
+      <use href="#it-arm" transform="rotate(60 50 59)"/>
+      <use href="#it-rhombus" transform="rotate(90 50 59)"/>
+    </g>
+    <!-- Hexagonal hub -->
+    <path d="M50 51.5L56.5 55.25V62.75L50 66.5L43.5 62.75V55.25Z" fill="#0C8DDF"/>
+  </g>
+
+  <use href="#it-shield" fill="none" stroke="#004AAD" stroke-width="7.5" stroke-linejoin="round"/>
+</svg>
